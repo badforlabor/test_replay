@@ -4,8 +4,10 @@ using UnrealBuildTool;
 
 public class test_replay : ModuleRules
 {
-	public test_replay(TargetInfo Target)
+	public test_replay(ReadOnlyTargetRules Target) : base(Target)
 	{
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
